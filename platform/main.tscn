@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cijultg1vkcom" path="res://Sprites/Explosion/4.png" id="4_ndd31"]
 [ext_resource type="Texture2D" uid="uid://dxasipj4bl05b" path="res://Sprites/Explosion/5.png" id="5_do8qe"]
 [ext_resource type="Texture2D" uid="uid://cx7tswvie64yi" path="res://Sprites/Explosion/6.png" id="6_kn58g"]
-[ext_resource type="Script" path="res://beginAnimation.gd" id="8_ke4jd"]
+[ext_resource type="Script" path="res://Scripts/beginAnimation.gd" id="8_ke4jd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ohbd"]
 resource_local_to_scene = true
