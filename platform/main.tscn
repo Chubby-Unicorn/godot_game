@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c15c1jk5ftams"]
+[gd_scene load_steps=11 format=3 uid="uid://c15c1jk5ftams"]
 
+[ext_resource type="Script" path="res://Scripts/PlayBomb.gd" id="1_l0cpw"]
 [ext_resource type="Texture2D" uid="uid://q7nrs5qqmw8a" path="res://Sprites/Explosion/1.png" id="1_okn05"]
 [ext_resource type="Texture2D" uid="uid://dks8qrauqhk6c" path="res://Sprites/Explosion/2.png" id="2_qlxvt"]
 [ext_resource type="Texture2D" uid="uid://cr1w7whsk5aq4" path="res://Sprites/Explosion/3.png" id="3_ec3ep"]
 [ext_resource type="Texture2D" uid="uid://cijultg1vkcom" path="res://Sprites/Explosion/4.png" id="4_ndd31"]
 [ext_resource type="Texture2D" uid="uid://dxasipj4bl05b" path="res://Sprites/Explosion/5.png" id="5_do8qe"]
 [ext_resource type="Texture2D" uid="uid://cx7tswvie64yi" path="res://Sprites/Explosion/6.png" id="6_kn58g"]
+[ext_resource type="Script" path="res://beginAnimation.gd" id="8_ke4jd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ohbd"]
 resource_local_to_scene = true
@@ -34,11 +36,23 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xo5kf"]
+radius = 10.8155
+
 [node name="Main" type="Node2D"]
+script = ExtResource("1_l0cpw")
+
+[node name="Game Manager" type="Node" parent="."]
 
 [node name="Camera" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6ohbd")
 animation = &"bombPulse"
-frame_progress = 0.47766
+frame_progress = 0.138123
+script = ExtResource("8_ke4jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(-9, -1)
+scale = Vector2(7.12, 7.12)
+shape = SubResource("CircleShape2D_xo5kf")
