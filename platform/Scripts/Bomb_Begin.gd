@@ -2,11 +2,12 @@ extends RigidBody2D
 
 var times_to_play : int = 1
 
-var bomb_timer : float = 3 #in seconds
+@export_group("Bomb Timer in seconds")
+@export var bomb_timer : float #in seconds
 
 func begin_animation():
 	$Animation.play() #star animation
-	$"../Sound Manager".bomb_sound() #star sound
+	$"../Sound Manager/BombTickSound".play()
 	explode_bomb()
 	
 func explode_bomb():

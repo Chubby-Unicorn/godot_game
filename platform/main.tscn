@@ -76,6 +76,7 @@ stream = ExtResource("3_wmjt1")
 [node name="Bomb" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 script = ExtResource("8_ke4jd")
+bomb_timer = 2.0
 
 [node name="Animation" type="AnimatedSprite2D" parent="Bomb"]
 sprite_frames = SubResource("SpriteFrames_6ohbd")
