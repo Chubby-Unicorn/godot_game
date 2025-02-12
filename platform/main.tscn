@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://c15c1jk5ftams"]
 
-[ext_resource type="Script" path="res://spawnsound.gd" id="1_4x1pt"]
+[ext_resource type="Script" path="res://Scripts/spawnsound.gd" id="1_4x1pt"]
 [ext_resource type="Texture2D" uid="uid://q7nrs5qqmw8a" path="res://Sprites/Explosion/1.png" id="1_okn05"]
 [ext_resource type="Texture2D" uid="uid://dks8qrauqhk6c" path="res://Sprites/Explosion/2.png" id="2_qlxvt"]
 [ext_resource type="Texture2D" uid="uid://cr1w7whsk5aq4" path="res://Sprites/Explosion/3.png" id="3_ec3ep"]
