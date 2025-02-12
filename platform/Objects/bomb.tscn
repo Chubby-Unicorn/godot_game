@@ -39,6 +39,7 @@ animations = [{
 radius = 7.74694
 
 [node name="Bomb" type="RigidBody2D"]
+input_pickable = true
 script = ExtResource("1_majnv")
 bomb_timer = 2.0
 
