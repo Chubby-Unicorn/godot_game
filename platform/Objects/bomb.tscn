@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7i1m6"]
-radius = 7.74694
+radius = 4.07866
 
 [node name="Bomb" type="RigidBody2D"]
 input_pickable = true
@@ -44,11 +44,12 @@ script = ExtResource("1_majnv")
 bomb_timer = 2.0
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_6ohbd")
 animation = &"bombPulse"
 frame_progress = 0.138123
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-9, 0)
-scale = Vector2(9.56, 9.56)
+position = Vector2(-4, 0)
+scale = Vector2(9.32, 9.32)
 shape = SubResource("CircleShape2D_7i1m6")

@@ -8,11 +8,11 @@ extends Camera2D
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP :
-			$".".zoom.x = 2
-			$".".zoom.y = 2
+			$".".zoom.x = 1.5
+			$".".zoom.y = 1.5
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			$".".zoom.x = 0.5
-			$".".zoom.y = 0.5
+			$".".zoom.x = 1
+			$".".zoom.y = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
