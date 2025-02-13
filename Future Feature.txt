@@ -4,4 +4,4 @@ FOR PRE-APLHA 1:
 	-PLAYER
 	-MOVEMENTS
 	-SIMPLE ADJECTIVE
-	-REPLACE AudioStreamPlayer with AudioStreamPlayer2D in certain objects for spatial audio
+	[DONE]-REPLACE AudioStreamPlayer with AudioStreamPlayer2D in certain objects for spatial audio
