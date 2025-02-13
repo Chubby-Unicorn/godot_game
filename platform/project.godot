@@ -17,4 +17,5 @@ config/icon="res://Sprites/icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.197747, 0.467685, 0.657216, 1)
