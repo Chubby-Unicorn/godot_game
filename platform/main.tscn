@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://c15c1jk5ftams"]
+[gd_scene load_steps=18 format=4 uid="uid://c15c1jk5ftams"]
 
 [ext_resource type="Texture2D" uid="uid://cgp3jwyk5j5kp" path="res://Sprites/Background-Day.png" id="1_8n88w"]
+[ext_resource type="Script" path="res://background_music_selector.gd" id="2_28ucy"]
+[ext_resource type="AudioStream" uid="uid://cys5nxyoyhin2" path="res://Sounds/backgroundmusic1.mp3" id="2_em4i6"]
 [ext_resource type="Script" path="res://Scripts/zoom.gd" id="3_jode7"]
 [ext_resource type="AudioStream" uid="uid://bkbhuwwh677ye" path="res://Sounds/explosionSound.mp3" id="3_wmjt1"]
+[ext_resource type="AudioStream" uid="uid://duplqniacy4cg" path="res://Sounds/backgroundmusic2.mp3" id="4_6lg4n"]
 [ext_resource type="PackedScene" uid="uid://dooknwacrw7sc" path="res://Objects/bomb.tscn" id="4_vn7xi"]
 [ext_resource type="Texture2D" uid="uid://cowpl6swrqkvn" path="res://Sprites/Envo/Tile/16x16 Tileset.png" id="6_gjpeu"]
 [ext_resource type="Script" path="res://movement.gd" id="7_6vlas"]
@@ -15832,13 +15835,22 @@ texture = ExtResource("1_8n88w")
 script = SubResource("GDScript_nqd2m")
 
 [node name="Background Music" type="Node" parent="Sound Manager"]
+script = ExtResource("2_28ucy")
+
+[node name="backgroundMusic1" type="AudioStreamPlayer" parent="Sound Manager/Background Music"]
+stream = ExtResource("2_em4i6")
+volume_db = -10.631
+
+[node name="Backgroundmusic2" type="AudioStreamPlayer" parent="Sound Manager/Background Music"]
+stream = ExtResource("4_6lg4n")
+volume_db = -17.102
 
 [node name="Bomb" type="Node" parent="Sound Manager"]
 
 [node name="BombTickSound" type="AudioStreamPlayer2D" parent="Sound Manager/Bomb"]
 stream = ExtResource("8_hxvfu")
 
-[node name="ExplosionSound" type="AudioStreamPlayer" parent="Sound Manager/Bomb"]
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="Sound Manager/Bomb"]
 stream = ExtResource("3_wmjt1")
 
 [node name="Environment" type="TileMapLayer" parent="."]
