@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c15c1jk5ftams"]
+[gd_scene load_steps=11 format=3 uid="uid://c15c1jk5ftams"]
 
 [ext_resource type="Script" path="res://Scripts/zoom.gd" id="3_jode7"]
-[ext_resource type="Texture2D" uid="uid://ccdgxsm06dp6f" path="res://Sprites/Envo/Building-Roof.png" id="3_ohvsh"]
 [ext_resource type="AudioStream" uid="uid://bkbhuwwh677ye" path="res://Sounds/explosionSound.mp3" id="3_wmjt1"]
 [ext_resource type="PackedScene" uid="uid://dooknwacrw7sc" path="res://Objects/bomb.tscn" id="4_vn7xi"]
+[ext_resource type="Texture2D" uid="uid://cfmqqvmh5cclp" path="res://Sprites/Envo/TileMap1.png" id="5_qhaf6"]
 [ext_resource type="AudioStream" uid="uid://ba3vidfksqyok" path="res://Sounds/BombTickSound.mp3" id="8_hxvfu"]
 
 [sub_resource type="GDScript" id="GDScript_flc2i"]
@@ -35,10 +35,15 @@ func _process(delta: float) -> void:
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmeeq"]
-size = Vector2(513, 129)
-
 [sub_resource type="Environment" id="Environment_se137"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l31v"]
+texture = ExtResource("5_qhaf6")
+0:0/size_in_atlas = Vector2i(25, 25)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uy5jt"]
+sources/0 = SubResource("TileSetAtlasSource_2l31v")
 
 [node name="Main" type="Node2D"]
 script = SubResource("GDScript_flc2i")
@@ -58,17 +63,14 @@ stream = ExtResource("3_wmjt1")
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("3_jode7")
 
-[node name="Floor" type="StaticBody2D" parent="."]
-
-[node name="Sprite" type="Sprite2D" parent="Floor"]
-texture = ExtResource("3_ohvsh")
-
-[node name="Collision" type="CollisionShape2D" parent="Floor"]
-position = Vector2(0.5, 1.5)
-shape = SubResource("RectangleShape2D_dmeeq")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_se137")
 
 [node name="Bomb" parent="." instance=ExtResource("4_vn7xi")]
 position = Vector2(-30, -510)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_uy5jt")
+collision_animatable = true
+format = 2
+layer_0/tile_data = PackedInt32Array(2883535, 0, 0, 2883559, 0, 0, 2883583, 0, 0, 2818071, 0, 0, 2818095, 0, 0, 2818119, 0, 0, 2818143, 0, 0, 2883511, 0, 0)

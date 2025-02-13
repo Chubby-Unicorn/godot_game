@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccdgxsm06dp6f"
-path="res://.godot/imported/Building-Roof.png-9f0f585299a533962e8b7f024e7b0df3.ctex"
+uid="uid://cfmqqvmh5cclp"
+path="res://.godot/imported/TileMap1.png-e9b375886f1dec1caa1b65db121ba435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Envo/Building-Roof.png"
-dest_files=["res://.godot/imported/Building-Roof.png-9f0f585299a533962e8b7f024e7b0df3.ctex"]
+source_file="res://Sprites/Envo/TileMap1.png"
+dest_files=["res://.godot/imported/TileMap1.png-e9b375886f1dec1caa1b65db121ba435.ctex"]
 
 [params]
 
